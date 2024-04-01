@@ -5,7 +5,7 @@ This script allow to renew automatically a ovh domain trought certbot and cerbot
 plugin certbot-dns-och doc: https://certbot-dns-ovh.readthedocs.io/en/stable/#
 You can use any other provider if is compatible (script must be modified), see list: https://eff-certbot.readthedocs.io/en/latest/using.html#dns-plugins
 
-Script requiremens:
+Script requirements:
 - OVH Domain
 - certbot and certbot-dns-ovh installed and configured: see https://certbot-dns-ovh.readthedocs.io/en/stable/#
   quick info: you have to generate token in ovh api here: EU --> https://eu.api.ovh.com/createToken/ US --> https://ca.api.ovh.com/createToken/
