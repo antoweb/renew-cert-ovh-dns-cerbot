@@ -19,17 +19,19 @@ chmod +x renew-cert-ovh-dns-cerbot.sh
 
 Please valorise all variables in first lines
 
+```
 ovhcredentialfile="<YOUR OVH CREDENTIALS FILE OVH-DNS-PLUGION CERTBOT FULL ABSOLUTE PATH>"  
 domain="<DOMAIN CERT TO DO/RENEW>"  
 certpath="<FULL ABSOLUTE PATH CONTAINING  CERT FILE>"  
 certkeypath"<FULL ABSOLUTE PATH CONTAINING KEY CERT FILE>"  
-certname="<CERT FILE NAME>"  
+certname="<CERT FILE NAME>"
 certkey="<CERT KEY FULL NAME>"  
 folder_to_archive="<FOLDE TO ARCHIVE OLD CERTS>"  
 certemail="<EMAIL TO RECEIVE EXPIRATIO CERT ALERT FROM CERTBOT>"  
 mailsender="<EMAIL FROM>"  
 mailto="<EMAIL TO SEND ALERTS>"  
 telegramconffile="<YOUR TELEGRAM CONFIG FILE  
+```
 
 Cron the script every 3 months like this:
 00 00 28 3,6,9,12 * root <FULL ABSOLUTE PATH OF THIS SCRIPT>
