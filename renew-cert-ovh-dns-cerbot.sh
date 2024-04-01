@@ -26,7 +26,7 @@ mkdir -p $folder_to_archive/$today
         RETVAL=$?
                 if [ ${RETVAL} -ne 0 ]
                 then
-                echo "ERRORE: EXIT_STATUS=\"${RETVAL}\", MESSAGGIO= Error generating cert see attachment" | mail -s "Error generating cert" -A /var/log/letsencrypt/letsencrypt.log -r $mailsender $mailto
+                echo "ERROR: EXIT_STATUS=\"${RETVAL}\", MESSAGE= Error generating cert see attachment" | mail -s "Error generating cert" -A /var/log/letsencrypt/letsencrypt.log -r $mailsender $mailto
                 else
 
                 /usr/local/bin/telegram-send --config $telegramconffile "Generation of cert *.$domain OK"
@@ -45,7 +45,7 @@ systemctl restart postfix
         RETVAL=$?
                 if [ ${RETVAL} -ne 0 ]
                 then
-                echo "ERRORE: EXIT_STATUS=\"${RETVAL}\", MESSAGGIO= Error restarting postfix after copying new cert *.$domain see attachment"  | mail -s "Error restarting postfix " -A /var/log/mail.err -r $mailsender $mailto
+                echo "ERROR: EXIT_STATUS=\"${RETVAL}\", MESSAGE= Error restarting postfix after copying new cert *.$domain see attachment"  | mail -s "Error restarting postfix " -A /var/log/mail.err -r $mailsender $mailto
                 else
 
                 /usr/local/bin/telegram-send --config $telegramconffile "Restart postfix after copying new cert *.$domain OK"
@@ -58,7 +58,7 @@ systemctl restart dovecot > /temp/restart_dovecot.log 2>&1
         RETVAL=$?
                 if [ ${RETVAL} -ne 0 ]
                 then
-                echo "ERRORE: EXIT_STATUS=\"${RETVAL}\", MESSAGGIO= Error restarting dovecot after copying new cert *.$domain see attachment"  | mail -s "Error restarting dovecot " -A /temp/restart_dovecot.log -r $mailsender $mailto
+                echo "ERROR: EXIT_STATUS=\"${RETVAL}\", MESSAGE= Error restarting dovecot after copying new cert *.$domain see attachment"  | mail -s "Error restarting dovecot " -A /temp/restart_dovecot.log -r $mailsender $mailto
                 else
 
                 /usr/local/bin/telegram-send --config $telegramconffile "Restart dovecot after copying new cert *.$domain OK"
@@ -70,7 +70,7 @@ systemctl restart nginx
         RETVAL=$?
                 if [ ${RETVAL} -ne 0 ]
                 then
-                echo "ERRORE: EXIT_STATUS=\"${RETVAL}\", MESSAGGIO= Error restarting nginx after copying new cert *.$domain see attachment"  | mail -s "Error restarting nginx " -A /var/log/nginx/mail.$domain-error.log -r $mailsender $mailto
+                echo "ERROR: EXIT_STATUS=\"${RETVAL}\", MESSAGE= Error restarting nginx after copying new cert *.$domain see attachment"  | mail -s "Error restarting nginx " -A /var/log/nginx/mail.$domain-error.log -r $mailsender $mailto
                 else
 
                 /usr/local/bin/telegram-send --config $telegramconffile "Restart nginx after copying new cert *.$domain OK"
