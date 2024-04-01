@@ -33,6 +33,7 @@ mailto="<EMAIL TO SEND ALERTS>"
 telegramconffile="<YOUR TELEGRAM CONFIG FILE  
 ```
 
-Cron the script every 3 months like this:
+Cron the script every 3 months like this:  
+```
 00 00 28 3,6,9,12 * root <FULL ABSOLUTE PATH OF THIS SCRIPT>
-  
+```
