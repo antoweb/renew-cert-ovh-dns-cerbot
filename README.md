@@ -40,5 +40,5 @@ Cron the script every 3 months like this:
 00 00 28 3,6,9,12 * root <FULL ABSOLUTE PATH OF THIS SCRIPT>
 ```
 
-PAYPAL DONTAION
+PAYPAL DONTAION  
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/sistemistaitaliano/1)
