@@ -1,4 +1,6 @@
 # renew-cert-ovh-dns-cerbot
+This script comes with absolutely no warranty, check all lines before execute it, your environment may be different
+
 Script to renew a certificate troutgh certbot aand och domain automatically (dns challenge)
 
 This script allow to renew automatically a ovh domain trought certbot and cerbot-dns-ovh-plugin, see: https://certbot.eff.org/instructions?ws=apache&os=ubuntufocal&tab=wildcard (instruction)
